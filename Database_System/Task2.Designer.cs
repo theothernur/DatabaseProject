@@ -44,10 +44,15 @@ namespace Database_System
             this.productidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mASAT_dbDataSet3 = new Database_System.MASAT_dbDataSet3();
+            this.hoodiesLimitedEditionOrdersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hoodiesLimitedEditionOrdersTableAdapter = new Database_System.MASAT_dbDataSet3TableAdapters.HoodiesLimitedEditionOrdersTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mASAT_dbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastYearOrdersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mASAT_dbDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoodiesLimitedEditionOrdersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,7 +91,7 @@ namespace Database_System
             this.productidDataGridViewTextBoxColumn,
             this.name1DataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.lastYearOrdersBindingSource;
+            this.dataGridView1.DataSource = this.hoodiesLimitedEditionOrdersBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(50, 115);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(392, 150);
@@ -102,7 +107,7 @@ namespace Database_System
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(393, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "All Orders from 2022";
+            this.button1.Text = "Show Orders for Hoodie (Limited Edition)";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
@@ -168,6 +173,20 @@ namespace Database_System
             this.priceDataGridViewTextBoxColumn.HeaderText = "price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             // 
+            // mASAT_dbDataSet3
+            // 
+            this.mASAT_dbDataSet3.DataSetName = "MASAT_dbDataSet3";
+            this.mASAT_dbDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hoodiesLimitedEditionOrdersBindingSource
+            // 
+            this.hoodiesLimitedEditionOrdersBindingSource.DataMember = "HoodiesLimitedEditionOrders";
+            this.hoodiesLimitedEditionOrdersBindingSource.DataSource = this.mASAT_dbDataSet3;
+            // 
+            // hoodiesLimitedEditionOrdersTableAdapter
+            // 
+            this.hoodiesLimitedEditionOrdersTableAdapter.ClearBeforeFill = true;
+            // 
             // Task2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +203,8 @@ namespace Database_System
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mASAT_dbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastYearOrdersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mASAT_dbDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoodiesLimitedEditionOrdersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +225,8 @@ namespace Database_System
         private System.Windows.Forms.DataGridViewTextBoxColumn productidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn name1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private MASAT_dbDataSet3 mASAT_dbDataSet3;
+        private System.Windows.Forms.BindingSource hoodiesLimitedEditionOrdersBindingSource;
+        private MASAT_dbDataSet3TableAdapters.HoodiesLimitedEditionOrdersTableAdapter hoodiesLimitedEditionOrdersTableAdapter;
     }
 }

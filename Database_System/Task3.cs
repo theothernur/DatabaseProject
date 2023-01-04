@@ -23,5 +23,12 @@ namespace Database_System
             f2.Show();
             this.Hide();
         }
+
+        private void Task3_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'mASAT_dbDataSet2.GraduatingStudents' table. You can move, or remove it, as needed.
+            this.graduatingStudentsTableAdapter.Fill(this.mASAT_dbDataSet2.GraduatingStudents);
+
+        }
     }
 }

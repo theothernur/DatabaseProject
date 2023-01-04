@@ -29,14 +29,25 @@ namespace Database_System
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_sign = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.mASAT_dbDataSet2 = new Database_System.MASAT_dbDataSet2();
+            this.graduatingStudentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.graduatingStudentsTableAdapter = new Database_System.MASAT_dbDataSet2TableAdapters.GraduatingStudentsTableAdapter();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.universityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studylevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mASAT_dbDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graduatingStudentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,7 +78,15 @@ namespace Database_System
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn,
+            this.universityDataGridViewTextBoxColumn,
+            this.facultyDataGridViewTextBoxColumn,
+            this.courseDataGridViewTextBoxColumn,
+            this.studylevelDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.graduatingStudentsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(50, 115);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(392, 150);
@@ -83,7 +102,7 @@ namespace Database_System
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(393, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "General Info of Students in Istanbul";
+            this.button1.Text = "Students Expected Graduating in 2023";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
@@ -105,6 +124,50 @@ namespace Database_System
             this.panel2.Size = new System.Drawing.Size(606, 124);
             this.panel2.TabIndex = 14;
             // 
+            // mASAT_dbDataSet2
+            // 
+            this.mASAT_dbDataSet2.DataSetName = "MASAT_dbDataSet2";
+            this.mASAT_dbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // graduatingStudentsBindingSource
+            // 
+            this.graduatingStudentsBindingSource.DataMember = "GraduatingStudents";
+            this.graduatingStudentsBindingSource.DataSource = this.mASAT_dbDataSet2;
+            // 
+            // graduatingStudentsTableAdapter
+            // 
+            this.graduatingStudentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // universityDataGridViewTextBoxColumn
+            // 
+            this.universityDataGridViewTextBoxColumn.DataPropertyName = "university";
+            this.universityDataGridViewTextBoxColumn.HeaderText = "university";
+            this.universityDataGridViewTextBoxColumn.Name = "universityDataGridViewTextBoxColumn";
+            // 
+            // facultyDataGridViewTextBoxColumn
+            // 
+            this.facultyDataGridViewTextBoxColumn.DataPropertyName = "faculty";
+            this.facultyDataGridViewTextBoxColumn.HeaderText = "faculty";
+            this.facultyDataGridViewTextBoxColumn.Name = "facultyDataGridViewTextBoxColumn";
+            // 
+            // courseDataGridViewTextBoxColumn
+            // 
+            this.courseDataGridViewTextBoxColumn.DataPropertyName = "course";
+            this.courseDataGridViewTextBoxColumn.HeaderText = "course";
+            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
+            // 
+            // studylevelDataGridViewTextBoxColumn
+            // 
+            this.studylevelDataGridViewTextBoxColumn.DataPropertyName = "studylevel";
+            this.studylevelDataGridViewTextBoxColumn.HeaderText = "studylevel";
+            this.studylevelDataGridViewTextBoxColumn.Name = "studylevelDataGridViewTextBoxColumn";
+            // 
             // Task3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,9 +178,12 @@ namespace Database_System
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Task3";
             this.Text = "Task3";
+            this.Load += new System.EventHandler(this.Task3_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mASAT_dbDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graduatingStudentsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -130,5 +196,13 @@ namespace Database_System
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private MASAT_dbDataSet2 mASAT_dbDataSet2;
+        private System.Windows.Forms.BindingSource graduatingStudentsBindingSource;
+        private MASAT_dbDataSet2TableAdapters.GraduatingStudentsTableAdapter graduatingStudentsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn universityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn facultyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn courseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studylevelDataGridViewTextBoxColumn;
     }
 }
