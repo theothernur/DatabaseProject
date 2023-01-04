@@ -49,5 +49,12 @@ namespace Database_System
 
       
         }
+
+        private void btn_sign_Click(object sender, EventArgs e)
+        {
+            Registration f6 = new Registration();
+            f6.Show();
+            this.Hide();
+        }
     }
 }

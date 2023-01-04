@@ -19,10 +19,12 @@ namespace Database_System
 
         private void Task2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mASAT_dbDataSet4.HoodiesLimitedEditionOrders' table. You can move, or remove it, as needed.
+            this.hoodiesLimitedEditionOrdersTableAdapter1.Fill(this.mASAT_dbDataSet4.HoodiesLimitedEditionOrders);
             // TODO: This line of code loads data into the 'mASAT_dbDataSet3.HoodiesLimitedEditionOrders' table. You can move, or remove it, as needed.
-            this.hoodiesLimitedEditionOrdersTableAdapter.Fill(this.mASAT_dbDataSet3.HoodiesLimitedEditionOrders);
+            //this.hoodiesLimitedEditionOrdersTableAdapter.Fill(this.mASAT_dbDataSet3.HoodiesLimitedEditionOrders);
             // TODO: This line of code loads data into the 'mASAT_dbDataSet1.LastYearOrders' table. You can move, or remove it, as needed.
-            this.lastYearOrdersTableAdapter.Fill(this.mASAT_dbDataSet1.LastYearOrders);
+            //this.lastYearOrdersTableAdapter.Fill(this.mASAT_dbDataSet1.LastYearOrders);
 
         }
 

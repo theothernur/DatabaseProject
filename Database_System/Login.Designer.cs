@@ -105,6 +105,7 @@ namespace Database_System
             this.btn_sign.TabIndex = 5;
             this.btn_sign.Text = "Sign Up";
             this.btn_sign.UseVisualStyleBackColor = false;
+            this.btn_sign.Click += new System.EventHandler(this.btn_sign_Click);
             // 
             // panel1
             // 
